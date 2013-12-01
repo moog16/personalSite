@@ -152,3 +152,7 @@ body {
   margin: 250px 0;
   position: relative;
 }
+
+.content {
+  margin-top: 600px;
+}
