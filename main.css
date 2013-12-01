@@ -20,6 +20,31 @@ body {
   height: auto;
 }
 
+.title {
+  position: absolute;
+  margin: 0 auto;
+  top: 100px;
+  padding: 0px 24px;
+  color: rgb(221, 210, 126);
+}
+
+.title h1 {
+  font-size: 75px;
+}
+
+.title h2 {
+  font-size: 30px;
+  font-family: 'Poiret One', cursive;
+}
+
+.sub {
+  top: 400px;
+}
+
+.right {
+  right: 0px;
+}
+
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
@@ -126,6 +151,23 @@ body {
     height:110%;
   }
 
+  .title {
+    top: 100px;
+    padding: 0px 24px;
+  }
+
+  .title h1 {
+    font-size: 200px;
+  }
+
+  .title h2 {
+    font-size: 50px;
+  }
+
+  .sub {
+    top: 400px;
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -157,7 +199,8 @@ body {
 .part {
   width: 100%;
   text-align: center;
-  background: rgb(142, 142, 196);
+  /*background: rgb(142, 142, 196);*/
+  background: url('./images/psNeutral.png');
   padding: 30px;
   margin: 250px 0;
   position: relative;
