@@ -5,6 +5,7 @@
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -12,6 +13,11 @@ body {
   padding-left: 0;
   padding-right: 0;
   width: 100%;
+}
+
+.small {
+  width: 100%;
+  height: auto;
 }
 
 /* CUSTOMIZE THE NAVBAR
@@ -49,7 +55,7 @@ body {
   text-align: center;
   background: rgb(142, 142, 196);
   padding: 30px;
-  margin: 250px 0;
+  margin: 450px 0;
 }
 .marketing h2 {
   font-weight: normal;
@@ -114,6 +120,10 @@ body {
 
   .featurette-heading {
     font-size: 50px;
+  }
+
+  .small {
+    height:110%;
   }
 
 }
