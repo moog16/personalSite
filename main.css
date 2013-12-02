@@ -114,26 +114,18 @@ body {
 
   /* Remove the edge padding needed for mobile */
   .marketing {
-    padding-left: 0;
+    padding-left: -15px;
     padding-right: -15px;
   }
 
   /* Navbar positioning foo */
-  .navbar-wrapper {
-    margin-top: 20px;
-  }
   .navbar-wrapper .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .navbar-wrapper .navbar {
-    padding-left:  0;
+    padding-left: 0;
     padding-right: 0;
   }
-
-  /* The navbar becomes detached from the top, so we round the corners */
   .navbar-wrapper .navbar {
-    border-radius: 4px;
+    padding-left:  15px;
+    padding-right: 0;
   }
 
   /* Bump up size of carousel content */
@@ -179,14 +171,27 @@ body {
 /*circle*/
 
 .circle {
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 100px;
+  background: red;
+  display: inline-block;
+  margin: 0 50px;
+}
+
+.text {
   border-radius: 300px;
   width: 300px;
   height: 300px;
-  overflow: hidden;
   -webkit-border-radius: 300px;
-  background: url('./images/myFace.jpg') no-repeat;
-  background-size: 100% auto;
   margin: auto;
+}
+
+.face {
+  background: url('./images/myFace.jpg') no-repeat;
+  overflow: hidden;
+  background-size: 100% auto;
 }
 
 
