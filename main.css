@@ -235,10 +235,9 @@ body {
 .contact {
   width: 100px;
   height: 100px;
-  background: red;
-  color: white;
+  
 }
 
 #linkedin {
-  -webkit-filter: invert(100%);  
+  /*-webkit-filter: invert(100%);  */
 }
