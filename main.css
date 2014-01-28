@@ -214,3 +214,31 @@ body {
 .content {
   margin-top: 600px;
 }
+
+#top {
+  position:fixed; 
+  top: 500px; 
+  left: 20px;
+  z-index: 10;
+  font-size: 20px;
+  color: orange;
+}
+
+.block-text {
+
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.contact {
+  width: 100px;
+  height: 100px;
+  background: red;
+  color: white;
+}
+
+#linkedin {
+  -webkit-filter: invert(100%);  
+}
