@@ -235,9 +235,10 @@ body {
 .contact {
   width: 100px;
   height: 100px;
-  
+  display: inline;
+  fill: red;
 }
 
-#linkedin {
-  /*-webkit-filter: invert(100%);  */
+.contact svg g path {
+  fill: red;
 }
