@@ -10,7 +10,6 @@ body {
 }
 
 a {
-  border: 1px solid black;
   display: inline-block;
 }
 
@@ -258,6 +257,6 @@ a {
   fill: red;
 }
 
-path:hover {
+.hover-fill {
   fill: red;
 }

@@ -31,15 +31,36 @@ var enterBlock = function() {
   });
 };
 
+var onHoverFill = function() {
+  var hoverFill = function(color) {
+    var $paths = $(this).find('path');
+    for(var i=0; i<$paths.length; i++) {
+      $paths.eq(i).css('fill', color);
+    }
+  };
 
+  var hoverIn = function() {
+    hoverFill('red');
+  };
+
+
+  $('.contact-info-link').hover(function() {
+    hoverFill('red');
+  });
+};
+
+
+enterBlock();
 
 $(document).ready(function() {
-  enterBlock();
 
   var $top = $('#top');
   $(window).scroll(function() {
     $top.text($(window).scrollTop());
-  });  
+  });
+
+  onHoverFill();
+
 
   // $("iframe").contents().find("path").on("click", function () {
   //     alert("Hello");
