@@ -31,9 +31,17 @@ var enterBlock = function() {
   });
 };
 
-enterBlock();
 
-var $top = $('#top');
-$(window).scroll(function() {
-  $top.text($(window).scrollTop());
+
+$(document).ready(function() {
+  enterBlock();
+
+  var $top = $('#top');
+  $(window).scroll(function() {
+    $top.text($(window).scrollTop());
+  });  
+
+  // $("iframe").contents().find("path").on("click", function () {
+  //     alert("Hello");
+  // });
 });

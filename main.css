@@ -11,6 +11,7 @@ body {
 
 a {
   border: 1px solid black;
+  display: inline-block;
 }
 
 .container {
@@ -257,6 +258,6 @@ a {
   fill: red;
 }
 
-.contact svg g path {
+path:hover {
   fill: red;
 }
