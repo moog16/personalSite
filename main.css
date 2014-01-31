@@ -9,6 +9,10 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  border: 1px solid black;
+}
+
 .container {
   padding-left: 0;
   padding-right: 0;
@@ -208,11 +212,12 @@ body {
   background: url('./images/psNeutral.png');
   padding: 30px;
   margin: 250px 0;
-  position: relative;
 }
 
 .content {
   margin-top: 600px;
+  z-index: 20;
+  position: relative;
 }
 
 #top {
@@ -225,7 +230,14 @@ body {
 }
 
 .block-text {
+  font-size: 50px;
+  color: white;
+  font-weight: 800;
+  text-align: center;
+}
 
+.block-text>span {
+  display: block;
 }
 
 .uppercase {
