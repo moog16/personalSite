@@ -229,15 +229,21 @@ a {
   color: orange;
 }
 
-.block-text {
+#love-block, .block-text{
   font-size: 50px;
   color: white;
   font-weight: 800;
   text-align: center;
 }
 
-.block-text>span {
-  display: block;
+.block-text>p {
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.block-text>p:first-child {
+  margin: 0;
 }
 
 .uppercase {
