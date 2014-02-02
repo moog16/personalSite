@@ -244,6 +244,7 @@ a {
 
 .block-text>p:first-child {
   margin: 0;
+  font-size: 70px;
 }
 
 .uppercase {
@@ -259,4 +260,8 @@ a {
 
 .hover-fill {
   fill: red;
+}
+
+.red {
+  background-color: red;
 }

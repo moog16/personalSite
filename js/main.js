@@ -32,25 +32,25 @@ var enterBlock = function() {
 };
 
 var onHoverFill = function() {
-  var hoverFill = function(color) {
-    var $paths = $(this).find('path');
+  var hoverFill = function($target, color) {
+    var $paths = $target.find('path');
     for(var i=0; i<$paths.length; i++) {
       $paths.eq(i).css('fill', color);
     }
   };
 
-  var hoverIn = function() {
-    hoverFill('red');
-  };
-
-
   $('.contact-info-link').hover(function() {
-    hoverFill('red');
+    hoverFill($(this), 'red');
+  }, function() {
+    hoverFill($(this), 'black');
   });
 };
 
 
+
 enterBlock();
+
+onHoverFill();
 
 $(document).ready(function() {
 
@@ -59,7 +59,6 @@ $(document).ready(function() {
     $top.text($(window).scrollTop());
   });
 
-  onHoverFill();
 
 
   // $("iframe").contents().find("path").on("click", function () {
