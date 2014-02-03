@@ -202,16 +202,24 @@ a {
 .backImg {
   height: 110%;
   margin: auto;
-  position:absolute;
+  position: absolute;
 }
 
 .part {
   width: 100%;
   text-align: center;
-  /*background: rgb(142, 142, 196);*/
   background: url('./images/psNeutral.png');
   padding: 30px;
   margin: 250px 0;
+}
+
+#photo-circles {
+  position: relative;
+  height: 200px;
+}
+
+#photo-circles .circle {
+  border: 1px solid black;
 }
 
 .content {
@@ -227,6 +235,10 @@ a {
   z-index: 10;
   font-size: 20px;
   color: orange;
+}
+
+#love-block {
+  height: 825px;
 }
 
 #love-block, .block-text{

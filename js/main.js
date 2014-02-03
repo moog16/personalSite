@@ -46,11 +46,53 @@ var onHoverFill = function() {
   });
 };
 
+var photoCircles = function() {
+  $('#photo-circles').height($(window).width()/2);
 
+  var createCircle = function(imageUrl, num) {
+    var radius = Math.floor($(window).width()/num);
+    var circleSize = Math.floor(Math.random()*radius) + radius;
+    var randX = Math.floor($(window).width()*Math.random()) - radius;
+    var randY = Math.floor($('#photo-circles').height()*Math.random());
+
+    if(randX > $(window).width()) {
+
+    }
+
+    return $("<div class='circle'></div>")
+            .css('position', 'absolute')
+            .css('left', randX + 'px')
+            .css('top', randY + 'px')
+            .width(circleSize + 'px')
+            .height(circleSize + 'px')
+            .css('border-radius', circleSize +'px')
+            .css('-webkit-border-radius', circleSize + 'px')
+            .css('background-image', 'url(' + imageUrl + ')')
+            .css('background-size', circleSize + 'px')
+            .css('background-repeat', 'no-repeat')
+            .css('background-position', '50%');
+  };
+
+  var imageUrls = [
+    'boats.jpg',
+    'poolparty.jpg',
+    'tiger.jpg',
+    'portrait.JPG',
+    'coldDock.JPG',
+    'energy.JPG',
+    'gates.jpg'
+  ];
+
+  for(var i=0; i<imageUrls.length; i++) {
+    var imageUrl = './images/splash/' + imageUrls[i];
+    $circle = createCircle(imageUrl, imageUrls.length);
+    $('#photo-circles').append($circle);
+  }
+};
 
 enterBlock();
+photoCircles();
 
-onHoverFill();
 
 $(document).ready(function() {
 
@@ -59,9 +101,5 @@ $(document).ready(function() {
     $top.text($(window).scrollTop());
   });
 
-
-
-  // $("iframe").contents().find("path").on("click", function () {
-  //     alert("Hello");
-  // });
+  onHoverFill();
 });
