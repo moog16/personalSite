@@ -55,22 +55,15 @@ var photoCircles = function() {
     var randX = Math.floor($(window).width()*Math.random()) - radius;
     var randY = Math.floor($('#photo-circles').height()*Math.random());
 
-    if(randX > $(window).width()) {
-
-    }
-
-    return $("<div class='circle'></div>")
-            .css('position', 'absolute')
+    return $("<div class='circle photo-circle-element'></div>")
             .css('left', randX + 'px')
             .css('top', randY + 'px')
             .width(circleSize + 'px')
             .height(circleSize + 'px')
             .css('border-radius', circleSize +'px')
             .css('-webkit-border-radius', circleSize + 'px')
-            .css('background-image', 'url(' + imageUrl + ')')
-            .css('background-size', circleSize + 'px')
-            .css('background-repeat', 'no-repeat')
-            .css('background-position', '50%');
+            .css('background-image', 'url(' + imageUrl + ')');
+
   };
 
   var imageUrls = [
@@ -91,10 +84,10 @@ var photoCircles = function() {
 };
 
 enterBlock();
-photoCircles();
 
 
 $(document).ready(function() {
+photoCircles();
 
   var $top = $('#top');
   $(window).scroll(function() {

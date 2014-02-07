@@ -222,6 +222,13 @@ a {
   border: 1px solid black;
 }
 
+.photo-circle-element {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-position: 50%;
+}
+
 .content {
   margin-top: 600px;
   z-index: 20;
