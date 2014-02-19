@@ -1,6 +1,4 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
+@import url('./foundation-icons/foundation-icons.css');
 
 body {
   padding-bottom: 40px;
@@ -203,6 +201,11 @@ a {
   height: 110%;
   margin: auto;
   position: absolute;
+}
+
+.width-100 {
+  width: 100%;
+  height: auto;
 }
 
 .part {
