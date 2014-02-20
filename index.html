@@ -34,8 +34,6 @@
 
     <div id='top'></div>
 
-    <!-- data-1400='top:1270px;' data-1550='top:1340px;' data-1700='top:1410px;' data-1850='top:1480px;' data-2000='top:1550px;' -->
-
     <img class='backImg' src='./images/CityPark.jpg' data-0='top:0px;' data-150='top:150px;' data-300='top:300px;' data-450='top:450px;' data-900='top:900px;'/>
 
     <img class='backImg small' src='./images/aloha.jpg' data-200='top:700px;' data-350='top:770px;' data-500='top:840px;' data-650='top:910px;' data-800='top:990px;' data-950='top:1060px;' data-1100='top:1100px' data-1300='top:1300px' data-1600='top:1600px'/>
@@ -51,10 +49,8 @@
     <div class='container marketing'>
 
       <div class='content'>
-        <div class='part'>
-          <!-- <div class='block-text'> -->
-            <h1 class='uppercase '>Meet me</h1>
-          <!-- </div> -->
+        <div class='part'>          
+          <h1 class='uppercase '>Meet me</h1>
           <div class='circle face text'></div>
           <div id='contact-group'>
             <a href='mailto:mattgoo@gmail.com' class='contact-info-link'>
@@ -165,13 +161,25 @@
 
   <script src='bootstrap/js/bootstrap.min.js'></script>
   <script src='js/main.js'></script>
-  <script src="js/skrollr.min.js"></script>
+  <script src="js/skrollr.js"></script>
   <script>
-    var options = {
-      mobileDeceleration: 0.0001,
-      forceHeight: true,
-      smoothScrolling: true
+
+  
+  var s = skrollr.init({
+    edgeStrategy: 'set',
+    easing: {
+      WTF: Math.random,
+      inverted: function(p) {
+        return 1-p;
+      }
     }
-    var s = skrollr.init(options);
+  });
+  
+  //   var options = {
+  //     mobileDeceleration: 1,
+  //     forceHeight: true,
+  //     smoothScrolling: true
+  //   }
+  //   var s = skrollr.init(options);
   </script>
 </html>
