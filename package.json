@@ -1,0 +1,20 @@
+{
+  "name": "mattgoo",
+  "version": "0.0.1",
+  "homepage": "https://github.com/meamstack/meetmeApp.git/",
+  "author": "Matt Goo <email>",
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meamstack/meetmeApp.git/"
+  },
+  "bugs": {},
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-stylus": "~0.8.0",
+    "jshint": "~2.4.4",
+    "livereload": "~0.3.2"
+  }
+}
