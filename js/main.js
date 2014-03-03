@@ -31,21 +31,6 @@ var enterBlock = function() {
   });
 };
 
-// var onHoverFill = function() {
-//   var hoverFill = function($target, color) {
-//     var $paths = $target.find('path');
-//     for(var i=0; i<$paths.length; i++) {
-//       $paths.eq(i).css('fill', color);
-//     }
-//   };
-
-//   $('.contact-info-link').hover(function() {
-//     hoverFill($(this), 'red');
-//   }, function() {
-//     hoverFill($(this), 'black');
-//   });
-// };
-
 var photoCircles = function() {
   $('#photo-circles').height($(window).width()/2);
 
@@ -94,39 +79,17 @@ $(document).ready(function() {
     $top.text($(window).scrollTop());
   });
 
-  // onHoverFill();
-
-
-  var controller = $.superscrollorama({
-    triggerAtCenter: false,
-    playoutAnimations: true
+  var scene = document.getElementById('scene');
+  var parallax = new Parallax(scene, {
+    calibrateX: false,
+    calibrateY: true,
+    invertX: false,
+    invertY: true,
+    limitX: false,
+    limitY: 10,
+    scalarX: 2,
+    scalarY: 8,
+    frictionX: 0.2,
+    frictionY: 0.8
   });
-
-  // controller.pin($('#cityPark'), 100, {
-    // anim: TweenMax.from($('#fade'),.5,{
-    //   css:{opacity:0}}),
-    //   0, // scroll duration of tween (0 means autoplay)
-    //   200);
-  // });
-
-  // controller.addTween($('#cityPark'), 100, {
-  //   anim: (new TimelineLite())
-  //     .append(
-  //       TweenMax.to($('#cityPark'), .25, 
-  //         {css:{top: 0}})
-  //       )
-      // .append(
-      //   TweenMax.to($('#cityPark'), .5, 
-      //     {css:{top: 800}})
-      // )
-      // .append(
-      //   TweenMax.to($('#cityPark'), .5, 
-      //     {css:{top: 1000}})
-      // )
-      // .append(
-      //   TweenMax.to($('#cityPark'), .5, 
-      //     {css:{top: 1200}})
-      // )
-  // });
-
 });
