@@ -9,17 +9,6 @@ a {
   display: inline-block;
 }
 
-.container {
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
-}
-
-.small {
-  width: 100%;
-  height: auto;
-}
-
 .sub {
   top: 400px;
 }
@@ -123,25 +112,32 @@ a {
   background-size: 100% auto;
 }
 
-
 .backImg {
-  height: 110%;
   margin: auto;
-  position: absolute;
+  height: 110%;
+  width: auto;
 }
 
-.width-100 {
+.backImg.small-width{
   width: 100%;
   height: auto;
 }
 
-.part {
+/*     content     */
+.content {
+  overflow-x: hidden;
+}
+
+.contact-me-segment {
   width: 100%;
   text-align: center;
   background: url('./images/psNeutral.png');
   padding: 30px;
   margin: 250px 0;
+  height: 520px;
+  position: absolute;
 }
+/*      end content     */
 
 #photo-circles {
   position: relative;
@@ -159,11 +155,6 @@ a {
   background-position: 50%;
 }
 
-.content {
-  margin-top: 600px;
-  z-index: 20;
-  position: relative;
-}
 #love-block {
   height: 825px;
 }
