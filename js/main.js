@@ -73,23 +73,16 @@ enterBlock();
 
 $(document).ready(function() {
   photoCircles();
+  
+  var $section = $('section');
+  var winH = $(window).height();
+  $section.height(winH);
 
-  var $top = $('#top');
-  $(window).scroll(function() {
-    $top.text($(window).scrollTop());
-  });
-
-  var scene = document.getElementById('scene');
-  var parallax = new Parallax(scene, {
-    calibrateX: false,
-    calibrateY: true,
-    invertX: false,
-    invertY: true,
-    limitX: false,
-    limitY: 10,
-    scalarX: 2,
-    scalarY: 8,
-    frictionX: 0.2,
-    frictionY: 0.8
-  });
+   var s = skrollr.init({
+        // render: function(data) {
+        //     //Debugging - Log the current scroll position.
+        //     //console.log(data.curTop);
+        // }
+    });
+  
 });

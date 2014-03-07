@@ -2,7 +2,6 @@ body {
   padding-bottom: 40px;
   color: #5a5a5a;
   width: 100%;
-  overflow-x: hidden;
 }
 
 a {
@@ -80,11 +79,6 @@ a {
 
 }
 
-@media (min-width: 992px) {
-  .featurette-heading {
-    margin-top: 120px;
-  }
-}
 
 /*circle*/
 
@@ -112,12 +106,30 @@ a {
   background-size: 100% auto;
 }
 
-.backImg {
-  margin: auto;
-  height: 110%;
-  width: auto;
+.bkgrnd {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
+.id1 .bkgrnd {
+  background-image: url('./images/cityPark.jpg');
+}
+
+.id2 .bkgrnd {
+  background-image: url('./images/aloha.jpg');
+}
+
+.id3 .bkgrnd {
+  background-image: url('./images/muir.jpg');
+}
+
+.id4 .bkgrnd {
+  background-image: url('./images/breckenridge.jpg');
+}
 .backImg.small-width{
   width: 100%;
   height: auto;
@@ -127,15 +139,12 @@ a {
 .content {
   overflow-x: hidden;
 }
-
 .contact-me-segment {
   width: 100%;
   text-align: center;
   background: url('./images/psNeutral.png');
   padding: 30px;
-  margin: 250px 0;
   height: 520px;
-  position: absolute;
 }
 /*      end content     */
 
