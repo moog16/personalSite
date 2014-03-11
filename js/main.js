@@ -14,8 +14,8 @@ var enterBlock = function() {
   var opOne = 1020;
   var opZero2 = 1090;
   $likeBlock.append("<p data-0='display:none;'" +
-                        "data-1000='position:fixed;top:250px;display:block'" +
-                        "data-2000='display:none;'>I love </p>");
+                        "data-2070='position:fixed;top:250px;display:block'" +
+                        "data-3070='display:none;'>I love </p>");
 
   likes.forEach(function(elm, i) {
     opZero1 = opZero1+60;

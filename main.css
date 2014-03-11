@@ -8,18 +8,15 @@ a {
   display: inline-block;
 }
 
-.sub {
-  top: 400px;
-}
-
-.right {
-  right: 0px;
+.sub-title {
+  /*top: 400px;*/
+  right: 0;
 }
 
 .title {
   position: absolute;
   margin: 0 auto;
-  top: 100px;
+  /*top: 100px;*/
   padding: 0px 24px;
   color: rgb(221, 210, 126);
 }
@@ -106,24 +103,24 @@ a {
   background-size: 100% auto;
 }
 
-.bkgrnd {
+.slide {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  height: 100%;
+  /*height: 100%;*/
   width: 100%;
 }
 
-.id1 .bkgrnd {
+.id1 {
   background-image: url('./images/cityPark.jpg');
 }
 
-.id2 .bkgrnd {
+.id2 {
   background-image: url('./images/aloha.jpg');
 }
 
-.id3 .bkgrnd {
+.id3 {
   background-image: url('./images/muir.jpg');
 }
 
@@ -144,9 +141,22 @@ a {
   text-align: center;
   background: url('./images/psNeutral.png');
   padding: 30px;
-  height: 520px;
+  height: 420px;
+  position: relative;
+}
+.contact-me-segment h1 {
+  text-align: left;
+  position: absolute;
 }
 /*      end content     */
+.contact-group {
+  display: inline-block;
+  width: 65px;
+}
+
+.contact-info-link span {
+  line-height: 40px;
+}
 
 #photo-circles {
   position: relative;
@@ -165,7 +175,7 @@ a {
 }
 
 #love-block {
-  height: 825px;
+  padding: 50px;
 }
 
 #love-block, .block-text{
@@ -197,10 +207,3 @@ a {
   fill: red;
 }
 
-.hover-fill {
-  fill: red;
-}
-
-.red {
-  background-color: red;
-}

@@ -3,27 +3,34 @@
 <head>
   <link rel='stylesheet' href='./bootstrap/css/bootstrap.min.css'>
   <link rel='stylesheet' href='./bootstrap/css/bootstrap-theme.min.css'>
-  <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet'>
-  <link rel='stylesheet' href='./main.css'>
+  <!-- <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet'> -->
   <link rel='stylesheet' href='./foundation-icons/foundation-icons.css'>
-  <script src="http://localhost:9090/livereload.js"></script>
+  <link rel='stylesheet' href='./main.css'>
+  <script src='http://localhost:9090/livereload.js'></script>
 </head>
 <body>
   <div class='content'>
-    <section class='slide id1'>
-      <div class='bkgrnd' data-center="background-position: 50% 0px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="id1"></div>
-      <div class='title'><h1>Matt Goo</h1></div>
+    <section class='slide id1'data-center='background-position: 50% 0px;' data-top-bottom='background-position: 50% -100px;'>
+
+      <div class='title' data-center='top:300px;' data-top-bottom='top:-400px;' data-anchor-target='.id1'><h1>Matt Goo</h1></div>
       
-      <div class='title sub right'><h2>Software Developer</h2></div>
+      <div class='title sub-title' data-center='top:300px;' data--100-top:'top:10px;'><h2>Software Developer</h2></div>
     </section>
 
-    <section class='slide id2'>
-      <img class='bkgrnd'></div>
+    <section class='slide id2' data-center-top='background-position: 50% 0px;' data-top-bottom='background-position: 75% -100px;'>
 
-      <div class='contact-me-segment'>
-        <h1 class='uppercase'>Meet me</h1>
+      <div class='contact-me-segment' data-top='position: relative;'data-center='position: fixed; top: 0px;' data-bottom-bottom='position: relative;'>
+        <h1 class='uppercase'>Contact Me</h1>
+
+ <!--        <div class='maca-content'>
+
+          <h4>SuperfoodFood Creations</h4>
+          <h2>Maca Mia</h2>
+          <span class='sub-header'>blissful bites</span>
+        </div>
+ -->
         <div class='circle face text'></div>
-        <div id='contact-group'>
+        <div class='contact-group'>
           <a href='mailto:mattgoo@gmail.com' class='contact-info-link'>
             <span class='fi-mail size-72'><span>
           </a>
@@ -41,13 +48,13 @@
             <span class='fi-social-twitter size-72'></span>
           </a>
         </div>
+
       </div>
     </section>
-
     <section class='slide id3'>
-      <img class='bkgrnd'></div>
       <div id='love-block' class='block-text'></div>
     </section>
+<!--
 
 
 
@@ -56,12 +63,12 @@
       <div id='photo-circles'></div>
     </section>
 
-
+-->
 
   </div>
 </body>
-  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-   <!--<script src='js/jquery.js'></script>-->
+  <!-- // <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script> -->
+  <script src='js/jquery.js'></script>
   <script src='bootstrap/js/bootstrap.min.js'></script>
   <script src='js/skrollr.js'></script>
   <script src='js/main.js'></script>
