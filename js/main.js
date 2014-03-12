@@ -1,4 +1,4 @@
-var enterBlock = function() {
+var loveBlock = function() {
   var likes = [ 'Web Development',
                 'Traveling',
                 'Basketball',
@@ -9,9 +9,7 @@ var enterBlock = function() {
                 'Sushi',
                 'Snorkling',
                 'Electronics'];
-  var $likeBlock = $('#love-block');
-  
-  $likeBlock.append("<p data-bottom-top='display:none;' data-"+ $(window).height()/2 
+  var $likeBlock = $('#love-block').append("<p data-bottom-top='display:none;' data-"+ $(window).height()/2 
                         + "-center-top='top:250px;display:block;'" +
                         "data--450-bottom='display:none;' data-anchor-target='.id3'>I love </p>");
 
@@ -62,7 +60,7 @@ var photoCircles = function() {
   }
 };
 
-enterBlock();
+loveBlock();
 
 
 $(document).ready(function() {
