@@ -144,7 +144,7 @@ a {
   background: url('./images/psNeutral.png');
   padding: 30px;
   height: 420px;
-  position: absolute;
+  position:fixed;
 }
 
 .contact-me-segment h1 {
@@ -198,6 +198,7 @@ a {
 .block-text>p:first-child {
   margin: 0;
   font-size: 70px;
+  position: fixed;
 }
 
 .uppercase {
