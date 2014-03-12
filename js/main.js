@@ -80,14 +80,28 @@ var addHorizontalMovement = function(elm) {
   });
 };
 
+var createPhotoCirclesWithMovement = function() {
+  var photoClassName = '.photo-circle-element';
+  $(photoClassName).remove();
+  photoCircles();
+  addHorizontalMovement(photoClassName);
+};
+
 loveBlock();
 
+$('.reloadPhotos').on('click', function() {
+  createPhotoCirclesWithMovement();
+});
+
+
+$('.photo-circle-element').on('down', function() {
+  console.log('helloe');
+});
 
 
 $(document).ready(function() {
-  photoCircles();
-  addHorizontalMovement('.photo-circle-element');
-  
+  createPhotoCirclesWithMovement();
+
   var $section = $('section');
   var winH = $(window).height();
   $section.height(winH);

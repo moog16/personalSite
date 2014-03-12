@@ -9,7 +9,6 @@ a {
 }
 
 .sub-title {
-  /*top: 400px;*/
   right: 0;
 }
 
@@ -103,6 +102,7 @@ a {
   background-size: 100% auto;
 }
 
+/*backgrounds *****/
 .slide {
   background-position: center;
   background-repeat: no-repeat;
@@ -131,6 +131,7 @@ a {
   width: 100%;
   height: auto;
 }
+/* end backgrounds *****/
 
 /*     content     */
 .content {
@@ -211,3 +212,41 @@ a {
   fill: red;
 }
 
+.reloadPhotos {
+  background: #6767BD;
+  width: 100px;
+  height: 39px;
+  border-style: none;
+  line-height: 12px;
+  border: 3px #553232 solid;
+  color: #C5EBF5;
+}
+
+.allWork {
+  margin: 0 auto;
+  width: 880px;
+}
+
+.work {
+  width: 250px;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 20px;
+  color: #000;
+  text-align: center;
+  padding-top: 189px;
+  font-size: 40px;
+}
+
+.coloradosae {
+  background-image: url('./images/work/coloradosae.png');
+}
+
+.padshacker {
+  background-image: url('./images/work/padshacker.png');
+}
+
+.radar {
+  background-image: url('./images/work/radar.png');
+}
