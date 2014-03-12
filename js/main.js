@@ -10,22 +10,17 @@ var enterBlock = function() {
                 'Snorkling',
                 'Electronics'];
   var $likeBlock = $('#love-block');
-  var opZero1 = 1000;
-  var opOne = opZero1+50;
-  var opZero2 = opOne+50;
-  $likeBlock.append("<p data-bottom-top='display:none;' data-"+ $(window).height()/2 +"-center-top='top:250px;display:block;'" +
-                        "data--200-bottom='display:none;' data-anchor-target='.id3'>I love </p>");
+  
+  $likeBlock.append("<p data-bottom-top='display:none;' data-"+ $(window).height()/2 
+                        + "-center-top='top:250px;display:block;'" +
+                        "data--450-bottom='display:none;' data-anchor-target='.id3'>I love </p>");
 
   likes.forEach(function(elm, i) {
-    opZero1 = opZero1+60;
-    opOne = opOne+60;
-    opZero2 = opZero2+60;
-
     var $newLove = $('<p>'+elm+'</p>');
 
-    $newLove.attr('data-' + opZero1, 'opacity:0;')
-        .attr('data-' + opOne, 'opacity:1;')
-        .attr('data-' + opZero2, 'opacity:0;');
+    $newLove.attr('data-center-top', 'opacity:0;')
+            .attr('data-center', 'opacity:1;')
+            .attr('data-center-bottom', 'opacity:0;');
     $likeBlock.append($newLove);
   });
 };
