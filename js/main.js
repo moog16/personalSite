@@ -6,7 +6,6 @@ var loveBlock = function() {
                 'Road Biking',
                 'Colorado',
                 'Shaved Ice',
-                'Sushi',
                 'Snorkling',
                 'Electronics'];
   var $likeBlock = $('#love-block').append("<p data-bottom-top='display:none;' data-"+ $(window).height()/2 
@@ -60,11 +59,34 @@ var photoCircles = function() {
   }
 };
 
+var addHorizontalMovement = function(elm) {
+  var $elements = $(elm);
+
+  $elements.each(function(i, item) {
+    var $item = $(item);
+    var leftPos = $item.position().left;
+    var randomSpeed = (Math.random() * $(window).width())/2;
+
+    if(leftPos < $(window).width()/2) {
+      randomSpeed = randomSpeed+leftPos;
+      $item.attr('data-bottom-top', 'left:'+leftPos+'px;')
+            .attr('data-top', 'left:'+randomSpeed+'px;');
+    } else {
+      var rightPos = $(window).width() - leftPos;
+      randomSpeed = rightPos - randomSpeed;
+      $item.attr('data-bottom-top', 'left:'+rightPos+'px;')
+            .attr('data-top', 'left:'+randomSpeed+'px;');
+    }
+  });
+};
+
 loveBlock();
+
 
 
 $(document).ready(function() {
   photoCircles();
+  addHorizontalMovement('.photo-circle-element');
   
   var $section = $('section');
   var winH = $(window).height();

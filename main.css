@@ -108,7 +108,7 @@ a {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  /*height: 100%;*/
+  position: relative;
   width: 100%;
 }
 
@@ -118,7 +118,6 @@ a {
 
 .id2 {
   background-image: url('./images/aloha.jpg');
-  position: relative;
 }
 
 .id3 {
