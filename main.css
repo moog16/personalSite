@@ -118,6 +118,7 @@ a {
 
 .id2 {
   background-image: url('./images/aloha.jpg');
+  position: relative;
 }
 
 .id3 {
@@ -136,18 +137,21 @@ a {
 .content {
   overflow-x: hidden;
 }
+
 .contact-me-segment {
   width: 100%;
   text-align: center;
   background: url('./images/psNeutral.png');
   padding: 30px;
   height: 420px;
-  position: relative;
+  position: absolute;
 }
+
 .contact-me-segment h1 {
   text-align: left;
   position: absolute;
 }
+
 /*      end content     */
 .contact-group {
   display: inline-block;
@@ -180,7 +184,7 @@ a {
 
 #love-block, .block-text{
   font-size: 50px;
-  color: white;
+  color: #7e1919;
   font-weight: 800;
   text-align: center;
 }
@@ -188,7 +192,7 @@ a {
 .block-text>p {
   text-transform: uppercase;
   text-align: left;
-  margin-left: 50px;
+  margin-left: 200px;
 }
 
 .block-text>p:first-child {

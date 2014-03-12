@@ -10,12 +10,11 @@ var enterBlock = function() {
                 'Snorkling',
                 'Electronics'];
   var $likeBlock = $('#love-block');
-  var opZero1 = 870;
-  var opOne = 1020;
-  var opZero2 = 1090;
-  $likeBlock.append("<p data-0='display:none;'" +
-                        "data-2070='position:fixed;top:250px;display:block'" +
-                        "data-3070='display:none;'>I love </p>");
+  var opZero1 = 900;
+  var opOne = opZero1+50;
+  var opZero2 = opOne+50;
+  $likeBlock.append("<p data-center='position:fixed;top:250px;display:block'" +
+                        "data-bottom='display:none;' data-anchor-target='.id3'>I love </p>");
 
   likes.forEach(function(elm, i) {
     opZero1 = opZero1+60;
