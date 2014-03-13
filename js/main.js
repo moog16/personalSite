@@ -10,7 +10,7 @@ var loveBlock = function() {
                 'Electronics'];
   var $likeBlock = $('#love-block').append("<p data-bottom-top='display:none;' data-"+ $(window).height()/2 
                         + "-center-top='top:250px;display:block;'" +
-                        "data--450-bottom='display:none;' data-anchor-target='.id3'>I love </p>");
+                        "data--350-bottom='display:none;' data-anchor-target='.id3'>I love </p>");
 
   likes.forEach(function(elm, i) {
     var $newLove = $('<p>'+elm+'</p>');
@@ -81,30 +81,32 @@ var addHorizontalMovement = function(elm) {
 };
 
 var createPhotoCirclesWithMovement = function() {
+  $('#photo-circles').height($(window).height()/2);
   var photoClassName = '.photo-circle-element';
   $(photoClassName).remove();
   photoCircles();
   addHorizontalMovement(photoClassName);
+
+  $('.photo-circle-element').mousedown(function() {
+    console.log();
+  }).click(function(e) {
+    $target = $(e.currentTarget);
+    console.log($target);
+  });
 };
 
 loveBlock();
-
-$('.reloadPhotos').on('click', function() {
-  createPhotoCirclesWithMovement();
-});
-
-
-$('.photo-circle-element').on('down', function() {
-  console.log('helloe');
-});
 
 
 $(document).ready(function() {
   createPhotoCirclesWithMovement();
 
-  var $section = $('section');
+  var $section = $('.slide');
   var winH = $(window).height();
-  $section.height(winH);
+  var sectionHeight = winH*1.5;
+  $section.height(sectionHeight);
+  var bodyHeight = sectionHeight * $section.length;
+  $('body').height(bodyHeight);
 
    var s = skrollr.init({
         // render: function(data) {
