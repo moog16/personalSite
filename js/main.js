@@ -23,7 +23,7 @@ var loveBlock = function() {
 };
 
 var photoCircles = function() {
-  $('#photo-circles').height($(window).width()/2);
+  $('#photo-circles').height($(window).width());
 
   var createCircle = function(imageUrl, num) {
     var radius = Math.floor($(window).width()/num);
@@ -81,7 +81,6 @@ var addHorizontalMovement = function(elm) {
 };
 
 var createPhotoCirclesWithMovement = function() {
-  $('#photo-circles').height($(window).height()/2);
   var photoClassName = '.photo-circle-element';
   $(photoClassName).remove();
   photoCircles();
@@ -95,24 +94,26 @@ var createPhotoCirclesWithMovement = function() {
   });
 };
 
-loveBlock();
 
 
 $(document).ready(function() {
   createPhotoCirclesWithMovement();
+  loveBlock();
 
   var $section = $('.slide');
   var winH = $(window).height();
   var sectionHeight = winH*1.5;
   $section.height(sectionHeight);
-  var bodyHeight = sectionHeight * $section.length;
-  $('body').height(bodyHeight);
-
-   var s = skrollr.init({
+  
+  
+  var s = skrollr.init({
         // render: function(data) {
         //     //Debugging - Log the current scroll position.
         //     //console.log(data.curTop);
         // }
-    });
-  
+  });
+
+  var bodyHeight = sectionHeight * $section.length;
+  $('body').height(bodyHeight);
+
 });
