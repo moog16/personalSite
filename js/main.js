@@ -23,7 +23,7 @@ var loveBlock = function() {
 };
 
 var photoCircles = function() {
-  $('#photo-circles').height($(window).width()/2);
+  $('#photo-circles').height($('.id4').height()*0.75);
 
   var createCircle = function(imageUrl, num) {
     var radius = Math.floor($(window).width()/num);
@@ -59,7 +59,7 @@ var photoCircles = function() {
   }
 };
 
-var addHorizontalMovement = function(elm) {
+var _addHorizontalMovement = function(elm) {
   var $elements = $(elm);
 
   $elements.each(function(i, item) {
@@ -81,38 +81,96 @@ var addHorizontalMovement = function(elm) {
 };
 
 var createPhotoCirclesWithMovement = function() {
-  $('#photo-circles').height($(window).height()/2);
   var photoClassName = '.photo-circle-element';
   $(photoClassName).remove();
   photoCircles();
-  addHorizontalMovement(photoClassName);
+  _addHorizontalMovement(photoClassName);
 
-  $('.photo-circle-element').mousedown(function() {
-    console.log();
-  }).click(function(e) {
-    $target = $(e.currentTarget);
-    console.log($target);
+  $('.photo-circle-element').click(function(e) {
+    _closeModal();
+    var $window = $(window);
+    var height = $window.height()/2;
+    var width = $window.width()/2;
+
+    var bg = $(this).css('background-image');
+    var $target = $('.id4 .background');
+
+    var $photoModal = $('<div></div>')
+                        .css('background-image', bg)
+                        .width(width)
+                        .height(height)
+                        .css('top', height*.5)
+                        .css('left', width*.5)
+                        .addClass('photoModal');
+
+    $target.append($('<div class="photoModalBack"></div>')).append($photoModal);
+    _listenForModalClose();
   });
 };
 
-loveBlock();
+var _closeModal = function() {
+  $('.photoModalBack').remove();
+  $('.photoModal').remove();
+};
 
+var _listenForModalClose = function() {
+  $('.photoModalBack').on('click', function() {
+    _closeModal();
+  });
+};
+
+var addResumeLogos = function() {
+  var logos = [
+    'angularjs',
+    'apache',
+    'backbone',
+    'C++',
+    'C',
+    'express-js',
+    'grunt',
+    'jasmine',
+    'javascript',
+    'jquery',
+    'mongodb',
+    'mysql',
+    'nodejs',
+    'phonegap',
+    'php',
+    'ruby',
+    'stylus'
+  ];
+  var $resume = $('.resumeIcons');
+  var location = 10;
+
+  $.each(logos, function(i, logoName) {
+    location = location + 50;
+
+    var $newLogo = $('<div></div>')
+                .css('background-image', 'url("./images/logos/'+logoName+'_logo.png")')
+                .css('left', location+'px');
+    $resume.append($newLogo);
+  });
+};
 
 $(document).ready(function() {
-  createPhotoCirclesWithMovement();
-
+  // must declare slide height first for circles to work
   var $section = $('.slide');
   var winH = $(window).height();
   var sectionHeight = winH*1.5;
   $section.height(sectionHeight);
-  var bodyHeight = sectionHeight * $section.length;
-  $('body').height(bodyHeight);
-
-   var s = skrollr.init({
+  createPhotoCirclesWithMovement();
+  loveBlock();
+  // addResumeLogos();
+  
+  
+  var s = skrollr.init({
         // render: function(data) {
         //     //Debugging - Log the current scroll position.
         //     //console.log(data.curTop);
         // }
-    });
-  
+  });
+
+  var bodyHeight = sectionHeight * $section.length;
+  $('body').height(bodyHeight);
+
 });
