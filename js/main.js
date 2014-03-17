@@ -46,9 +46,9 @@ var photoCircles = function() {
     'boats.jpg',
     'poolparty.jpg',
     'tiger.jpg',
-    'portrait.JPG',
-    'coldDock.JPG',
-    'energy.JPG',
+    'portrait.jpg',
+    'coldDock.jpg',
+    'energy.jpg',
     'gates.jpg'
   ];
 
