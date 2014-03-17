@@ -9,15 +9,16 @@ a {
 }
 
 .sub-title {
-  right: 0;
+  /*right: 0;*/
 }
 
 .title {
-  position: absolute;
+  /* position: absolute; */
   margin: 0 auto;
-  /*top: 100px;*/
+  /* top: 100px; */
   padding: 0px 24px;
-  color: rgb(221, 210, 126);
+  /* color: #DDD27E; */
+  display: inline-block;
 }
 
 .title h1 {
@@ -114,7 +115,7 @@ a {
 }
 
 .id1 .background {
-  background-image: url('./images/cityPark.jpg');
+  /*background-image: url('./images/cityPark.jpg');*/
 }
 
 .id2 .background {
@@ -139,7 +140,54 @@ a {
 .id5 {
   position: relative;
 }
+/* front page *****/
+.front-page-pictures {
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  display: inline-block;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin-top: 100px;
+  border: 1px solid #000;
+}
 
+.frontpage {
+  background-size: cover;
+  width: 300px;
+  height: 100%;
+  display:inline-block;
+}
+
+.beach {
+  background-image: url('./images/frontPage/beach.jpg');
+  background-position-x: -100px;
+}
+
+.colorado {
+  background-image: url('./images/frontPage/colorado.jpg');
+  background-position-x: -350px;
+  background-size: 700px;
+}
+.disneyland {
+  background-image: url('./images/frontPage/disneyland.jpg');
+  background-position-x: -150px;
+  background-size: 700px;
+}
+.firecracker {
+  background-image: url('./images/frontPage/firecracker.jpg');
+  background-position-x: -222px;
+  background-size: 800px;
+}
+.santa {
+  background-image: url('./images/frontPage/santa.jpg');
+}
+.seattle {
+  background-image: url('./images/frontPage/seattle.jpg');
+  background-position-x: -110px;
+}
+/* end front page *****/
 .backImg.small-width{
   width: 100%;
   height: auto;
