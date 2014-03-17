@@ -151,7 +151,6 @@ var addResumeLogos = function() {
     $resume.append($newLogo);
   });
 };
-
 $(document).ready(function() {
   // must declare slide height first for circles to work
   var $section = $('.slide');
