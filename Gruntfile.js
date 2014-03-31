@@ -3,10 +3,18 @@ module.exports = function(grunt) {
     grunt.initConfig({
         watch : {
             scripts : {
+                stylesheets: {
+                    files: 'styles/stylus/*.styl',
+                    tasks: [ 'styles' ]
+                },
+                scripts: {
+                    files: 'js/scripts/*.js',
+                    tasks: ['scripts']
+                },
                 files : [
-                          'js/**/*.js',
-                          '*.css',
-                          'index.html'
+                          'index.html',
+                          'js/*.js/',
+                          'styles/*.css'
                         ],
                 options : {
                   livereload : 9090,
@@ -59,10 +67,12 @@ module.exports = function(grunt) {
     
 
 
-    grunt.registerTask('default', ['stylus', 'watch']);
-    grunt.registerTask('build', ['stylus', 'cssmin', 'uglify']);
+    grunt.registerTask('styles', ['stylus', 'cssmin']);
+    grunt.registerTask('scripts', ['uglify']);
 
-    grunt.registerTask('stylus', ['stylus']);
+
+    grunt.registerTask('build', ['styles', 'scripts']);
+    grunt.registerTask('default', ['build', 'watch']);
 
     // grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
