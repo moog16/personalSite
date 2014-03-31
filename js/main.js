@@ -160,6 +160,7 @@ $(document).ready(function() {
   createPhotoCirclesWithMovement();
   loveBlock();
   // addResumeLogos();
+  var map = L.map('map-view').setView([51.505, -0.09], 13);
   
   
   var s = skrollr.init({

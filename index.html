@@ -3,7 +3,8 @@
 <head>
   <link rel='stylesheet' href='./bootstrap/css/bootstrap.min.css'>
   <link rel='stylesheet' href='./bootstrap/css/bootstrap-theme.min.css'>
-  <!-- <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet'> -->
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+  <link href='http://fonts.googleapis.com/css?family=Quintessential' rel='stylesheet' type='text/css'>
   <link rel='stylesheet' href='./foundation-icons/foundation-icons.css'>
   <link rel='stylesheet' href='./main.css'>
   <script src='http://localhost:9090/livereload.js'></script>
@@ -14,22 +15,21 @@
       <div class='background'>
         <div class='title' data-center='top:300px;' data-top-bottom='top:-400px;' data-anchor-target='.id1'><h1>Matt Goo</h1></div>
         
-        <div class='title sub-title' data-center='top:300px;' data--100-top:'top:10px;'><h2>Software Developer</h2></div>
-        <div class='front-page-pictures'>
+        <div class='sub-title' data-center='top:300px;' data--100-top:'top:10px;'><h2>Software Developer</h2></div>
+        <!--<div class='front-page-pictures'>
           <div class='frontpage seattle'></div>
           <div class='frontpage beach'></div>
           <div class='frontpage colorado'></div>
           <div class='frontpage disneyland'></div>
           <div class='frontpage firecracker'></div>
           <div class='frontpage santa'></div>
-        </div>
+        </div>-->
 
       </div>
     </section>
 
     <section class='slide id2'>
-      <div class='background' data-bottom-top='background-position: 50% 0px;' data-top-
-    bottom='background-position: 75% -100px;'>
+      <div class='background' data-bottom-top='background-position: 50% 0px;' data-top-bottom='background-position: 75% -100px;'>
         <div class='contact-me-segment' data-center-top='top:-420px;' data-center-bottom='top:800px;' data-anchor-target='.id2'>
           <h1 class='uppercase'>Contact Me</h1>
           <div class='circle face text'></div>
@@ -60,6 +60,10 @@
       </div>
     </section>
 
+    <section id='map-view'>
+
+    </section>
+
     <section class='slide id4'>
       <div class='background' data-bottom-top='background-position: 50% 0px;' data-top-bottom='background-position: 20% 0px;'>
         <div id='photo-circles'></div>
@@ -82,6 +86,7 @@
 </body>
   <script src='js/jquery.js'></script>
   <script src='bootstrap/js/bootstrap.min.js'></script>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
   <script src='js/skrollr.js'></script>
   <script src='js/main.js'></script>
 </html>

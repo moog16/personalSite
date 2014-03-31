@@ -10,25 +10,22 @@ a {
 
 .sub-title {
   /*right: 0;*/
+  font-size: 30px;
 }
 
 .title {
-  /* position: absolute; */
   margin: 0 auto;
-  /* top: 100px; */
   padding: 0px 24px;
-  /* color: #DDD27E; */
   display: inline-block;
+  position: relative;
+  top: 268px;
 }
 
 .title h1 {
   font-size: 75px;
+  font-family: 'Quintessential', cursive;
+  color: #0085ff;
 }
-
-.title h2 {
-  font-size: 30px;
-}
-
 
 @media (min-width: 768px) {
 
@@ -66,7 +63,7 @@ a {
     font-size: 200px;
   }
 
-  .title h2 {
+  .sub-title h2 {
     font-size: 50px;
   }
 
@@ -115,7 +112,7 @@ a {
 }
 
 .id1 .background {
-  /*background-image: url('./images/cityPark.jpg');*/
+  background-image: url('./images/frontPage/beach.jpg');
 }
 
 .id2 .background {
@@ -146,10 +143,7 @@ a {
   width: 100%;
   height: 500px;
   display: inline-block;
-  overflow-x: scroll;
-  overflow-y: hidden;
   white-space: nowrap;
-  margin-top: 100px;
   border: 1px solid #000;
 }
 
@@ -185,7 +179,6 @@ a {
 }
 .seattle {
   background-image: url('./images/frontPage/seattle.jpg');
-  background-position-x: -110px;
 }
 /* end front page *****/
 .backImg.small-width{
@@ -338,3 +331,5 @@ a {
   background-size: 70px;
 }
 /* end work *****/
+
+#map-view { height: 180px; }
