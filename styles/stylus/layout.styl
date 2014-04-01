@@ -4,12 +4,12 @@ body
   padding-bottom: 40px
   color: #5a5a5a
   width: 100%
+  margin: 0
 
 a
   display: inline-block
 
 .sub-title
-  /*right: 0*/
   font-size: 30px
 
 .title
@@ -18,11 +18,10 @@ a
   display: inline-block
   position: relative
   top: 268px
-
-.title h1
-  font-size: 75px
-  font-family: 'Quintessential', cursive
-  color: #0085ff
+  h1
+    font-size: 75px
+    font-family: 'Quintessential', cursive
+    color: #0085ff
 
 @media (min-width: 768px)
 
@@ -108,7 +107,7 @@ a
 .id4 .background
   background-image: url(images-directory + 'breckenridge.jpg')
 
-.id5 .background{
+.id5 .background
   background-image: url(images-directory + 'skulls.png')
   background-repeat: repeat
   background-size: auto
@@ -151,7 +150,7 @@ a
 .seattle
   background-image: url(images-directory + 'frontPage/seattle.jpg')
 /* end front page *****/
-.backImg.small-width{
+.backImg.small-width
   width: 100%
   height: auto
 /* end backgrounds *****/
@@ -176,6 +175,10 @@ a
 .contact-group
   display: inline-block
   width: 65px
+  a
+    color: #428bca
+    :hover
+      color: #2a6496
 
 .contact-info-link span
   line-height: 40px
@@ -195,7 +198,7 @@ a
 #love-block
   padding: 50px
 
-#love-block, .block-text{
+#love-block, .block-text
   font-size: 50px
   color: #7e1919
   font-weight: 800

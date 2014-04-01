@@ -2,22 +2,28 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         watch : {
-            scripts : {
-                stylesheets: {
-                    files: 'styles/stylus/*.styl',
-                    tasks: [ 'styles' ]
-                },
-                scripts: {
-                    files: 'js/scripts/*.js',
-                    tasks: ['scripts']
-                },
-                files : [
-                          'index.html',
-                          'js/*.js/',
-                          'styles/*.css'
-                        ],
-                options : {
-                  livereload : 9090,
+            stylesheets: {
+                files: ['styles/**/*.styl'],
+                tasks: [ 'stylus' ],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
+            },
+            scripts: {
+                files: [ 'js/**/*.js'],
+                tasks: ['uglify'],
+                options: {
+                    spawn: false,
+                    livereload: true
+                }
+            },
+            text: {
+                files: ['*.html'],
+                tasks: [],
+                options: {
+                    spawn: false,
+                    livereload: true
                 }
             }
         },
@@ -57,9 +63,8 @@ module.exports = function(grunt) {
         cssmin: {
             build: {
                 files: {
-                    'styles/main.min.css': [ 'vendor/bootstrap/css/bootstrap-theme.css',
-                                                'vendor/bootstrap/bootstrap.css',
-                                                'styles/main.css']
+                    'styles/vendor.min.css': ['vendor/bootstrap/css/bootstrap-theme.css',
+                                              'vendor/bootstrap/bootstrap.css']
                 }
             }
         },
