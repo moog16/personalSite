@@ -6,3 +6,5 @@ dist
 .tmp
 app/bower_components
 icomoon
+js/*.min.js
+styles/*.min.css
