@@ -30,11 +30,14 @@ module.exports = function(grunt) {
         stylus : {
           compile : {
             options : {
-                'paths': [
+                paths: [
                     'node_modules/',    // nib
                     'styles/'             // Individual components
                 ],
-                compress: false
+                compress: false,
+                define: {
+                    'images-directory': '../images/'
+                }
             },
             files : {
                 'styles/main.css': 'styles/**/*.styl'
@@ -44,7 +47,7 @@ module.exports = function(grunt) {
         uglify: {
             vendors: {
                 files: {
-                    'js/vendor.min.js': ['vendor/boostrap/js/boostrap.js',
+                    'js/vendor.min.js': ['vendor/boostrap/**/*.js',
                                          'vendor/*.js']
                 }
             },
@@ -56,33 +59,40 @@ module.exports = function(grunt) {
                     }
                 },
                 files: {
-                    'js/main.min.js': ['js/scripts/main.js']
+                    'js/main.min.js': ['js/scripts/*.js',
+                                       'vendor/shapeHoverEffect/hovers.js']
                 }
             }
         },
         cssmin: {
             build: {
                 files: {
-                    'styles/vendor.min.css': ['vendor/bootstrap/css/bootstrap-theme.css',
-                                              'vendor/bootstrap/bootstrap.css']
+                    'styles/vendor.min.css': ['vendor/bootstrap/**/*.css',
+                                              'vendor/shapeHoverEffect/*.css']
                 }
             }
         },
+        clean: {
+            build: {
+                src: ['js/*.min.js', 'styles/*.min.css']
+            }
+        }
     });
     
 
-
+    grunt.registerTask('clean', ['clean']);
     grunt.registerTask('styles', ['stylus', 'cssmin']);
     grunt.registerTask('scripts', ['uglify']);
 
 
     grunt.registerTask('build', ['styles', 'scripts']);
-    grunt.registerTask('default', ['build', 'watch']);
+    grunt.registerTask('default', ['clean', 'build', 'watch']);
 
     // grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 };
 

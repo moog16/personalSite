@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
   <link href='http://fonts.googleapis.com/css?family=Quintessential' rel='stylesheet' type='text/css'>
   <link rel='stylesheet' href='./vendor/foundation-icons/foundation-icons.css'>
-  <script src="//localhost:35729/livereload.js"></script>
+  <script src="http://localhost:35729/livereload.js"></script>
  <!-- <script src='http://localhost:9090/livereload.js'></script> -->
   <link rel='stylesheet' href='./styles/main.css' />
   <link rel='stylesheet' href='./styles/vendor.min.css' />
@@ -16,15 +16,6 @@
         <div class='title' data-center='top:300px;' data-top-bottom='top:-400px;' data-anchor-target='.id1'><h1>Matt Goo</h1></div>
         
         <div class='sub-title' data-center='top:300px;' data--100-top:'top:10px;'><h2>Software Developer</h2></div>
-        <!--<div class='front-page-pictures'>
-          <div class='frontpage seattle'></div>
-          <div class='frontpage beach'></div>
-          <div class='frontpage colorado'></div>
-          <div class='frontpage disneyland'></div>
-          <div class='frontpage firecracker'></div>
-          <div class='frontpage santa'></div>
-        </div>-->
-
       </div>
     </section>
 
@@ -59,11 +50,11 @@
         <div id='love-block' class='block-text'></div>
       </div>
     </section>
-
+<!-- 
     <section id='map-view'>
 
     </section>
-
+ -->
     <section class='slide id4'>
       <div class='background' data-bottom-top='background-position: 50% 0px;' data-top-bottom='background-position: 20% 0px;'>
         <div id='photo-circles'></div>
@@ -75,9 +66,41 @@
         <div class='resumeIcons'>
         </div>
         <div class='allWork'>
-          <a class='work coloradosae' href='http://coloradosae.org'>ColoradoSae</a>
-          <a class='work padshacker' href='http://padshacker.com'>PadShacker</a>
-          <a class='work radar' href='http://myradar.co'>Radar</a>
+          <section id="grid" class="grid clearfix">
+            <a href='http://coloradosae.org' data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+              <figure>
+                <img src="images/work/coloradosae.png" />
+                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/></svg>
+                <figcaption>
+                  <h2>ColoradoSae</h2>
+                  <p>Fraternity Website</p>
+                  <button>View</button>
+                </figcaption>
+              </figure>
+            </a>
+             <a href='http://padshacker.com' data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+              <figure>
+                <img src="images/work/padshacker.png" />
+                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/></svg>
+                <figcaption>
+                  <h2>PadShacker</h2>
+                  <p>Angular App</p>
+                  <button>View</button>
+                </figcaption>
+              </figure>
+            </a>
+             <a href='http://myradar.co' data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+              <figure>
+                <img src="images/work/radar.png" />
+                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/></svg>
+                <figcaption>
+                  <h2>Radar</h2>
+                  <p>Group PhoneGap App</p>
+                  <button>View</button>
+                </figcaption>
+              </figure>
+            </a>
+          </section>
         </div>
       </div>
     </section>
@@ -87,6 +110,44 @@
   <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
   <script src='js/vendor.min.js'></script>
   <script src='js/main.min.js'></script>
+  <script src='js/scripts/photoCircles.js'></script>
+  <script>
+    $(document).ready(function() {
+      // must declare slide height first for circles to work
+      var $section = $('.slide');
+      var winH = $(window).height();
+      var sectionHeight = winH*1.5;
+      $section.height(sectionHeight);
+      var params = { 
+                    classname: 'photo-circle-element',
+                    imagePath: './images/splash/',
+                    imageUrls: [
+                            'boats.jpg',
+                            'poolparty.jpg',
+                            'tiger.jpg',
+                            'portrait.jpg',
+                            'coldDock.jpg',
+                            'energy.jpg',
+                            'gates.jpg'
+                          ]};
+      createPhotoCirclesWithMovement('.id4', '#photo-circles', params);
+      loveBlock();
+      // addResumeLogos();
+      // var map = L.map('map-view').setView([51.505, -0.09], 13);
+      
+      
+      var s = skrollr.init({
+            // render: function(data) {
+            //     //Debugging - Log the current scroll position.
+            //     //console.log(data.curTop);
+            // }
+      });
+
+      var bodyHeight = sectionHeight * $section.length;
+      $('body').height(bodyHeight);
+
+    });
+  </script>
 </html>
 <!-- <h2>About</h2>
 <p>Full stack software engineer that loves javascript and a rich client experience. I love meaningful projects that make impacts in society and individual's lives. Especially applications that bring people together and make lifelong connections.</p>

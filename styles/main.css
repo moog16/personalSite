@@ -1,84 +1,3 @@
-body {
-  padding-bottom: 40px;
-  color: #5a5a5a;
-  width: 100%;
-  margin: 0;
-}
-a {
-  display: inline-block;
-}
-.sub-title {
-  font-size: 30px;
-}
-.title {
-  margin: 0 auto;
-  padding: 0px 24px;
-  display: inline-block;
-  position: relative;
-  top: 268px;
-}
-.title h1 {
-  font-size: 75px;
-  font-family: 'Quintessential', cursive;
-  color: #0085ff;
-}
-@media (min-width: 768px) {
-  .navbar-wrapper .container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .navbar-wrapper .navbar {
-    padding-left: 15px;
-    padding-right: 0;
-  }
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
-  }
-  .featurette-heading {
-    font-size: 50px;
-  }
-  .small {
-    height: 110%;
-  }
-  .title {
-    top: 100px;
-    padding: 0px 24px;
-  }
-  .title h1 {
-    font-size: 200px;
-  }
-  .sub-title h2 {
-    font-size: 50px;
-  }
-  .sub {
-    top: 400px;
-  }
-}
-/*circle*/
-.circle {
-  border-radius: 100px;
-  width: 100px;
-  height: 100px;
-  -webkit-border-radius: 100px;
-  background: #f00;
-  display: inline-block;
-  margin: 0 50px;
-}
-.text {
-  border-radius: 300px;
-  width: 300px;
-  height: 300px;
-  -webkit-border-radius: 300px;
-  margin: auto;
-}
-.face {
-  background: url("../images//myFace.jpg") no-repeat;
-  overflow: hidden;
-  background-size: 100% auto;
-}
-/*backgrounds *****/
 .background {
   background-position: center;
   background-repeat: no-repeat;
@@ -109,7 +28,6 @@ a {
 .id5 {
   position: relative;
 }
-/* front page *****/
 .front-page-pictures {
   background-size: cover;
   width: 100%;
@@ -149,13 +67,32 @@ a {
 .seattle {
   background-image: url("../images/frontPage/seattle.jpg");
 }
-/* end front page *****/
 .backImg.small-width {
   width: 100%;
   height: auto;
 }
-/* end backgrounds *****/
-/*     content     */
+
+.circle {
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 100px;
+  background: #f00;
+  display: inline-block;
+  margin: 0 50px;
+}
+.text {
+  border-radius: 300px;
+  width: 300px;
+  height: 300px;
+  -webkit-border-radius: 300px;
+  margin: auto;
+}
+.face {
+  background: url("../images//myFace.jpg") no-repeat;
+  overflow: hidden;
+  background-size: 100% auto;
+}
 .content {
   overflow-x: hidden;
 }
@@ -171,7 +108,6 @@ a {
   text-align: left;
   position: absolute;
 }
-/*      end content     */
 .contact-group {
   display: inline-block;
   width: 65px;
@@ -184,6 +120,46 @@ a {
 }
 .contact-info-link span {
   line-height: 40px;
+}
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+  width: 100%;
+  margin: 0;
+}
+a {
+  display: inline-block;
+}
+.sub-title {
+  font-size: 30px;
+}
+.title {
+  margin: 0 auto;
+  padding: 0px 24px;
+  display: inline-block;
+  position: relative;
+  top: 268px;
+}
+.title h1 {
+  font-size: 75px;
+  font-family: 'Quintessential', cursive;
+  color: #0085ff;
+}
+@media (min-width: 768px) {
+  .title {
+    top: 100px;
+    padding: 0px 24px;
+  }
+  .title h1 {
+    font-size: 200px;
+  }
+  .sub-title h2 {
+    font-size: 50px;
+  }
+  .sub {
+    top: 400px;
+  }
 }
 #photo-circles {
   position: relative;
@@ -249,7 +225,10 @@ a {
   background-size: contain;
   position: fixed;
 }
-/* work/resume *****/
+#map-view {
+  height: 180px;
+}
+
 .allWork {
   margin: 0 auto;
   width: 880px;
@@ -265,15 +244,6 @@ a {
   padding-top: 189px;
   font-size: 40px;
 }
-.coloradosae {
-  background-image: url("../images/work/coloradosae.png");
-}
-.padshacker {
-  background-image: url("../images/work/padshacker.png");
-}
-.radar {
-  background-image: url("../images/work/radar.png");
-}
 .resumeIcons div {
   height: 70px;
   width: 70px;
@@ -282,7 +252,4 @@ a {
   right: 70px;
   background-repeat: no-repeat;
   background-size: 70px;
-}
-#map-view {
-  height: 180px;
 }
