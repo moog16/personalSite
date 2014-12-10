@@ -47,8 +47,7 @@ module.exports = function(grunt) {
         uglify: {
             vendors: {
                 files: {
-                    'js/vendor.min.js': ['vendor/boostrap/**/*.js',
-                                         'vendor/*.js']
+                    'js/vendor.min.js': ['vendor/*.js']
                 }
             },
             my_target: {

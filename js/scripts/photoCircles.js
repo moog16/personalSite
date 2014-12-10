@@ -18,42 +18,50 @@
 *   'images/b.jpg'
 *   'images/c.jpg'
 */
-var createPhotoCirclesWithMovement = function(containerClass, circleDiv, params) {
+var createPhotoCirclesWithMovement = function(containerClass, circleDiv, params, movement) {
   var photoClassName = '.' + params.classname;
   $(photoClassName).remove();
   photoCircles(containerClass, circleDiv, params);
 
-  _addHorizontalMovement(photoClassName);
+  if(movement) {
+    _addHorizontalMovement(photoClassName);
+  }
 };
 
-var photoCircles = function(heightDef, circleDiv, params) {
-  $(circleDiv).height($(heightDef).height()*0.75);
+var createCircle = function(imageUrl, containerTagClass, circleClassNames, num, selector) {
+  selector = selector || '.'+circleClassNames.split(' ').join('.');
+  var radius = Math.floor($(window).width()/num);
+  var circleSize = Math.floor(Math.random()*radius) + radius;
+  var randX = Math.floor($(window).width()*Math.random()) - radius;
+  var randY = Math.floor($(containerTagClass).height()*Math.random());
+  var $circle = $("<div class='"+ circleClassNames +"'></div>")
+          .css('left', randX + 'px')
+          .css('top', randY + 'px')
+          .width(circleSize + 'px')
+          .height(circleSize + 'px')
+          .css('border-radius', circleSize +'px')
+          .css('-webkit-border-radius', circleSize + 'px')
+          .css('background-image', 'url(' + imageUrl + ')');
+
+    debugger;
+  if($circle.overlaps(selector).length > 0) {
+    createCircle(imageUrl, containerTagClass, circleClassNames, num);
+  } else {
+    return $circle;
+  }
+};
+
+var photoCircles = function(heightOfWindow, containerTagClass, params) {
+  $(containerTagClass).height($(heightOfWindow).height()*0.75);
   var circleClassNames = params.classname || '';
   circleClassNames += ' circle';
   var imagePath = params.imagePath || '';
   var imageUrlPaths = params.imageUrls || [];
 
-  var createCircle = function(imageUrl, num) {
-    var radius = Math.floor($(window).width()/num);
-    var circleSize = Math.floor(Math.random()*radius) + radius;
-    var randX = Math.floor($(window).width()*Math.random()) - radius;
-    var randY = Math.floor($(circleDiv).height()*Math.random());
-
-    return $("<div class='"+ circleClassNames +"'></div>")
-            .css('left', randX + 'px')
-            .css('top', randY + 'px')
-            .width(circleSize + 'px')
-            .height(circleSize + 'px')
-            .css('border-radius', circleSize +'px')
-            .css('-webkit-border-radius', circleSize + 'px')
-            .css('background-image', 'url(' + imageUrl + ')');
-
-  };
-
   for(var i=0; i<imageUrlPaths.length; i++) {
     var imageUrl = imagePath + imageUrlPaths[i];
-    $circle = createCircle(imageUrl, imageUrlPaths.length);
-    $(circleDiv).append($circle);
+    $circle = createCircle(imageUrl, containerTagClass, circleClassNames, imageUrlPaths.length);
+    $(containerTagClass).append($circle);
   }
 };
 
